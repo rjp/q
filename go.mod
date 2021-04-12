@@ -1,4 +1,4 @@
-module github.com/ryboe/q
+module github.com/rjp/q
 
 go 1.16
 
