@@ -6,12 +6,18 @@ package q
 
 import (
 	"fmt"
+	"os"
+	"path/filepath"
 )
 
 // nolint: gochecknoglobals
 var (
 	// std is the singleton logger.
 	std logger
+	// Colors determines whether we output colors or not
+	Colors bool = true
+	// OutputFile is the default output file (`/tmp/q`); set to `""` for `os.Stderr`
+	OutputFile string = filepath.Join(os.TempDir(), "q")
 )
 
 // Q pretty-prints the given arguments to the $TMPDIR/q log file.
