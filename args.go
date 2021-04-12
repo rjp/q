@@ -111,6 +111,9 @@ func argWidth(arg string) int {
 // colorize returns the given text encapsulated in ANSI escape codes that
 // give the text color in the terminal.
 func colorize(text string, c color) string {
+	if Colors == false {
+		return text
+	}
 	return string(c) + text + string(endColor)
 }
 
